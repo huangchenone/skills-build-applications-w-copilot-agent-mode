@@ -1,0 +1,91 @@
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  color: #6c757d;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.topbar-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #e9f8ef;
+  color: #0f5132;
+  font-weight: 600;
+}
+
+.api-url {
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.page-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  background: white;
+}
+
+.alert {
+  border-radius: 0.75rem;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.text-muted {
+  color: #6c757d;
+}
