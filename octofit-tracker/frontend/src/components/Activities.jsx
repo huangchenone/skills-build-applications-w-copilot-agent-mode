@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-const getApiBaseUrl = () => {
+const getApiEndpoint = () => {
   const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim();
 
   if (codespaceName) {
-    return `https://${codespaceName}-8000.app.github.dev/api`;
+    return `https://${codespaceName}-8000.app.github.dev/api/activities`;
   }
 
-  return 'http://localhost:8000/api';
+  return 'http://localhost:8000/api/activities';
 };
 
 const parseData = (payload) => {
@@ -25,7 +25,7 @@ export default function Activities() {
   useEffect(() => {
     const fetchActivities = async () => {
       try {
-        const response = await fetch(`${getApiBaseUrl()}/activities/`);
+        const response = await fetch(getApiEndpoint());
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);
         }

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-const getApiBaseUrl = () => {
+const getApiEndpoint = () => {
   const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim();
 
   if (codespaceName) {
-    return `https://${codespaceName}-8000.app.github.dev/api`;
+    return `https://${codespaceName}-8000.app.github.dev/api/leaderboard`;
   }
 
-  return 'http://localhost:8000/api';
+  return 'http://localhost:8000/api/leaderboard';
 };
 
 const parseData = (payload) => {
@@ -25,7 +25,7 @@ export default function Leaderboard() {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await fetch(`${getApiBaseUrl()}/leaderboard/`);
+        const response = await fetch(getApiEndpoint());
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);
         }
